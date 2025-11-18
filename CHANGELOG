@@ -19,3 +19,4 @@ XEngine_AVCodecApp V1.0.0.1001
 17. 支持字幕
 18. 支持多文件转码处理(XEngine_AVToolApp)
 19. 支持播放排班以及定时播放
+20. AI音视频检测和修复

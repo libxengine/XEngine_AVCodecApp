@@ -57,8 +57,8 @@ Software Features:
 17. Supports subtitles.
 18. Supports batch file transcoding (XEngine_AVToolApp).
 19. Supports playback scheduling and timed playback.
-20. AI Support (Planned).
-21. Mute and Black Screen Support (Planned).
+20. AI Support.
+21. Mute and Black Screen Support.
 
 ## Installation
 
@@ -73,8 +73,12 @@ Then you can run `./XEngine_AVCodecApp` for testing.
 Not currently supported.
 
 ## Registration
-Our software requires registration for use, costing 200 RMB per year. Please contact us to register.
-You can also try the trial version. The trial version does not support codecs, filters, or image processing.
+Our software requires registration for use, costing 200 RMB per year.unlimited 1000. Please contact us to register.
+You can also try the trial version. The trial version does not support codecs, filters, or image processing.ai need unilimit version.
+
+#### get more?
+We can also provide the source code of the transcoding tool (2000).  
+can also provide core source code; the specific price can be discussed by contacting us
 
 ## Screenshots
 ![Screenshot 1](picture/1.png "Screenshot 1 Title")
