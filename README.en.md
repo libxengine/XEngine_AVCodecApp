@@ -66,7 +66,7 @@ Software Features:
 Run directly.
 
 #### Linux
-Requires Ubuntu 24.04 LTS. First, run the environment setup script.
+Requires Ubuntu 24.04 LTS. First, run the environment setup script AVCodec_ENVInstall.sh.
 Then you can run `./XEngine_AVCodecApp` for testing.
 
 #### macOS

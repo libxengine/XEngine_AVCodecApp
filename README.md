@@ -65,7 +65,7 @@ XEngine_AVCodecApp是核心程序,他提供了对音视频的编解码,拉流推
 直接运行即可
 
 #### Linux
-需要Ubuntu24.04 lts系统,首先执行环境安装脚本.  
+需要Ubuntu24.04 lts系统,首先执行环境安装AVCodec_ENVInstall.sh 脚本.  
 然后可以运行 ./XEngine_AVCodecApp 服务进行测试
 
 #### Macos

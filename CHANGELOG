@@ -1,3 +1,35 @@
+XEngine_AVCodecApp V1.1.0.1001
+
+增加:支持重置开始时间戳的参数
+优化:音视频封包过滤器
+优化:媒体解包函数
+优化:优化转码工具图像处理不存在的时候逻辑
+优化:工具启动逻辑优化
+优化:转码工具支持自动结束没任务的进程
+修改:使用新的音频队列处理方法
+修正:码率控制问题
+修正:多线程任务转码问题修正
+修正:转码工具写日志问题
+修正:seek后音画同步问题优化
+修正:转码工具死锁和验证问题
+修正:转码过程错误导致进程卡死问题
+修正:解码参数不一致导致的问题
+
+Add: Support for resetting the start timestamp
+Optimize: Audio and video packet filter
+Optimize: Media unpacking function
+Optimize: Logic when image processing does not exist in the transcoding tool
+Optimize: Tool startup logic
+Optimize: Transcoding tool supports automatically ending processes with no tasks
+Modify: Use a new audio queue processing method
+Fix: Bitrate control issue
+Fix: Multithreaded transcoding task issue
+Fix: Log writing issue in the transcoding tool
+Fix: Audio-video sync issue after seek
+Fix: Deadlock and verification issues in the transcoding tool
+Fix: Process hang issue caused by transcoding errors
+Fix: Issue caused by inconsistent decoding parameters
+========================================================================
 XEngine_AVCodecApp V1.0.0.1001
 
 1. 支持HTTP协议通信,支持HTTP API控制(大量API接口帮助你随心所欲的控制推拉流编解码)
