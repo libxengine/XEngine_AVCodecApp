@@ -1,6 +1,7 @@
 [Chinese](README.md) || [English](README.en.md)
 # XEngine_AVCodecApp
-AVCodecApp is a background service-based streaming media push/pull service for audio and video. It is not a streaming media server; it is a push/pull relay service that supports codecs, which can assist you in processing streaming media audio and video data.
+General Audio/Video Codec Tool,General Audio/Video Transcoding Tool,Audio/Video Transcoding Service,Audio/Video Encoding/Decoding Service
+XEngine_AVCodecApp is a background service-based streaming media push/pull service for audio and video. It is not a streaming media server; it is a push/pull relay service that supports codecs, which can assist you in processing streaming media audio and video data.
 
 ## Introduction
 Why develop this tool? Streaming media servers are already very mature and plentiful on the market. Therefore, we are not focusing on the streaming media service itself, but rather on derivative products, such as this software.
@@ -73,7 +74,12 @@ Then you can run `./XEngine_AVCodecApp` for testing.
 Not currently supported.
 
 ## Registration
-Our software requires registration for use, costing 200 RMB per year.unlimited 1000. Please contact us to register.
+Our software requires registration for use. Please contact us to register.  
+- Trial Version: Free, provides format re-muxing only
+- Standard Version: ¥200/year, provides encoding/decoding services
+- Professional Version: ¥300/year, provides filter and effects support
+- Ultimate Version: ¥500/year, provides AI detection and processing support
+- Unlimited Version: ¥1000 one-time, no time limitations
 You can also try the trial version. The trial version does not support codecs, filters, or image processing.ai need unilimit version.
 
 #### get more?
