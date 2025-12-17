@@ -1,3 +1,25 @@
+XEngine_AVCodecApp V1.2.1.1001
+
+优化:解码参数拷贝以及硬编码失败重新选择软编解码功能
+优化:验证模式优化
+修改:调整转码工具权限处理的问题
+修改:转码工具编解码参数完善封装以及配置生效
+修正:转码服务修正MP2编码不生效的问题
+修正:修正硬解码某些时候绿屏的问题
+修正:转码工具保存配置无效
+修正:水印消除和协议修正
+修正:delogo滤镜引起的崩溃
+
+improved:Decode parameter copying optimized, with automatic fallback to software encoding/decoding when hardware encoding fails
+improved:Verification mode optimization
+modify:Adjusted permission handling issues in the transcoding tool
+modify:Improved encapsulation of encoding/decoding parameters in the transcoding tool and ensured configuration takes effect
+fixed:Fixed an issue where MP2 encoding did not take effect in the transcoding service
+fixed:Fixed occasional green screen issues during hardware decoding
+fixed:Fixed an issue where the transcoding tool failed to save configurations
+fixed:Fixed watermark removal and protocol-related issues
+fixed:Fixed crashes caused by the delogo filter
+========================================================================
 XEngine_AVCodecApp V1.1.0.1001
 
 增加:支持重置开始时间戳的参数
