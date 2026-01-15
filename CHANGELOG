@@ -1,3 +1,37 @@
+XEngine_AVCodecApp V1.3.2.1001
+
+增加:腾讯SDK云配音以及下载支持
+增加:转码服务加解密支持
+增加:云配置界面,完善配置读写
+增加:增加端口范围配置支持
+优化:图像处理滤镜优化
+优化:优化编译选项
+优化:修改优化主动退出逻辑
+修改:转码服务新版音画同步方案
+修改:云配置读写支持完善
+修改:重新设计进度通信数据协议
+修改:调整通信逻辑,删除多余配置,调整界面处理逻辑
+修正:delogo参数无效问题
+修正:启动销毁崩溃问题修正
+修正:修改文本滤镜处理问题
+修正:水印消除和协议修正
+
+Added: Tencent SDK Cloud Voiceover and download support
+Added: Encryption and decryption support for transcoding services
+Added: Cloud configuration interface improved configuration read/write
+Added: Support for port range configuration
+Optimized: Image processing filter optimization
+Optimized: Optimized compilation options
+Optimized: Modified and optimized active exit logic
+Modified: New audio-video synchronization scheme for transcoding services
+Modified: Improved support for cloud configuration read/write
+Modified: Redesigned progress communication data protocol
+Modified: Adjusted communication logic, removed redundant configurations, and adjusted interface processing logic
+Fixed: Issue where delogo parameters were ineffective
+Fixed: Fixed crash issues during startup and destruction
+Fixed: Modified text filter processing issues
+Fixed: Watermark removal and protocol corrections
+========================================================================
 XEngine_AVCodecApp V1.2.1.1001
 
 优化:解码参数拷贝以及硬编码失败重新选择软编解码功能
