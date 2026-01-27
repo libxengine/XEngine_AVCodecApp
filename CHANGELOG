@@ -1,3 +1,17 @@
+XEngine_AVCodecApp V1.4.0.1001
+
+增加:云配置加解密支持
+增加:COS删除对象操作支持
+增加:支持字幕压制选项
+修改:云配置界面逻辑修改
+修改:调整转码工具界面代码逻辑
+
+Add: cloud configuration encryption and decryption support
+Add: Support for COS object deletion operations
+Add: Support subtitle burning option
+Revised: Cloud Configuration Interface Logic Modification
+Modify: Adjust the code logic of the transcoding tool interface
+========================================================================
 XEngine_AVCodecApp V1.3.2.1001
 
 增加:腾讯SDK云配音以及下载支持
