@@ -1,3 +1,33 @@
+XEngine_AVCodecApp V1.5.0.1001
+
+Added: Points support
+Modified: Adjusted creation protocol, fixed m3u8 output issue
+Modified: Adjusted points functionality in transcoding tool
+Optimized: Optimized data communication network code
+Optimized: Windows Firewall alert handling
+Fixed: Incorrect deletion of image processing handle
+Fixed: COS deletion configuration not taking effect
+Fixed: Transcoding file checkbox issue
+Fixed: Service now exits correctly after verification
+Fixed: Incorrect bitrate issue in UDP streaming
+Fixed: Progress notification issue
+Fixed: Transcoding error statistics issue
+Fixed: Audio multi-channel processing issue
+
+增加:点数支持
+修改:调整创建协议,修正输出m3u8的问题
+修改:调整转码工具点数功能
+优化:优化数据通信网络代码
+优化:windows防火墙警报
+修正:删除图像处理句柄不正确的问题
+修正:COS删除配置不生效
+修正:转码文件复选框问题修正
+修正:验证服务后可以正确退出了
+修正:UDP推流码率不正确问题
+修正:进度通知问题 
+修正:转码错误统计问题
+修正:音频多通道无法处理的问题
+========================================================================
 XEngine_AVCodecApp V1.4.0.1001
 
 增加:云配置加解密支持
