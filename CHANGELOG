@@ -1,3 +1,49 @@
+XEngine_AVCodecApp V1.6.3.1001
+
+Add: macOS system support
+Add: Multi-bitrate compatibility support
+Add: Playback failure handling logic
+Improved: Image transcoding performance issues
+Improved: File enumeration
+Improved: Cloud transcoding logic processing
+Improved: Multi-file merge support and hardware decoding limitations
+Improved: Image processing module performance
+Improved: Log export performance
+Improved: Image overlay performance
+Modify: Skip errors when merging episodes
+Modify: Tencent Cloud transcoding request optimization
+Fix: Transcoding artifacts caused by certain formats
+Fix: Abnormal exit issue with end messages under multiple tokens
+Fix: Widescreen conversion issue
+Fix: TSP streaming over UDP issue
+Fix: Points optimization issue
+Fix: TS output format and total bitrate configuration issues
+Fix: Cloud transcoding timeout optimization
+Fix: Issues caused by unsupported sampling formats
+Fix: Occasional crashes when stopping image processing
+
+增加:MACOS系统支持
+增加:多码率兼容性支持
+增加:播放处理失败处理逻辑
+优化:图像转码性能问题
+优化:文件枚举优化
+优化:云转码逻辑处理优化
+优化:多文件合并支持与硬解码限制
+优化:图像处理模块性能
+优化:日志导出性能
+优化:图像叠加性能
+修改:对合并剧集错误跳过
+修改:腾讯云转码请求优化
+修正:某些格式导致转码花屏问题
+修正:结束消息在多token下异常退出问题
+修正:宽屏转换问题
+修正:TSP推流UDP的问题
+修正:修正要优化点数问题
+修正:ts输出格式和总码率配置问题
+修正:优化云转码超时
+修正:某些采样格式不支持导致的问题
+修正:停止图像处理某些时候崩溃问题
+========================================================================
 XEngine_AVCodecApp V1.5.0.1001
 
 Added: Points support

@@ -2,19 +2,11 @@
 clear
 m_EnvRelease=0
 #检查
-function InstallEnv_CheckRoot()
-{
-	echo -e "\033[34m检查你的执行权限中。。。\033[0m"
- 	ROOT_UID=0
-	if [ "$UID" -eq "$ROOT_UID" ] ; then
-		echo -e "\033[32m检查到是ROOT权限执行，继续执行下一步。。。\033[0m"
-	else
-		echo -e "\033[31m检查到你不是ROOT权限，请切换到ROOT权限执行。。。 \033[0m"
-		exit 0
-	fi
-}
+
 function InstallEnv_CheckSystem()
 {
+	echo -e "\033[94m 检测系统环境...\033[0m"
+
 	if [ $(uname) == "Linux" ] ; then
 		if [ -f /etc/redhat-release ]; then
 			if grep -Eq "CentOS" /etc/redhat-release; then
@@ -47,34 +39,51 @@ function InstallEnv_CheckSystem()
 		echo -e "不支持的发行版本，无法继续"
 		exit
 	fi
+	echo -e "\033[94m系统环境为:${m_EnvCurrent}...\033[0m"
 }
 #安装框架
 function InstallEnv_XEngine()
 {
+	echo -e "\033[94m安装环境框架...\033[0m"
 	cd XEngine_Package
 
 	if [ "$m_EnvRelease" -eq "1" ] ; then
 		rm -rf ./XEngine_RockyLinux_10_x86-64
 		unzip ./XEngine_RockyLinux_10_x86-64.zip -d ./XEngine_RockyLinux_10_x86-64
 		cd ./XEngine_RockyLinux_10_x86-64
+
+		chmod 777 ./XEngine_LINEnv.sh
+		./XEngine_LINEnv.sh -b -i 6
+		./XEngine_LINEnv.sh -i 3
 	elif [ "$m_EnvRelease" -eq "2" ] ; then 
 		rm -rf ./XEngine_UBuntu_24.04_x86-64
 		unzip ./XEngine_UBuntu_24.04_x86-64.zip -d ./XEngine_UBuntu_24.04_x86-64
 		cd ./XEngine_UBuntu_24.04_x86-64
+
+		chmod 777 ./XEngine_LINEnv.sh
+		./XEngine_LINEnv.sh -b -i 6
+		./XEngine_LINEnv.sh -i 3
 	elif [ "$m_EnvRelease" -eq "3" ] ; then 
-		echo -e "not support"
+		rm -rf ./XEngine_Mac_Arm64
+		unzip ./XEngine_Mac_Arm64.zip -d ./XEngine_Mac_Arm64
+		cd ./XEngine_Mac_Arm64
+
+		chmod 777 ./XEngine_LINEnv.sh
+		 ./XEngine_LINEnv.sh -i 0
+		sudo mkdir -p /usr/local/include
+  		sudo mkdir -p /usr/local/lib
+  		sudo cp -rf ./XEngine_Include /usr/local/include
+  		sudo find ./XEngine_Mac -name "*.dylib" -exec cp {} /usr/local/lib \;
 	else 
 		echo -e "not support"
 	fi
 	
-	chmod 777 ./XEngine_LINEnv.sh
-	./XEngine_LINEnv.sh -b -i 6
-	./XEngine_LINEnv.sh -i 3
     cd ..
 }
 #安装tsduck
 function InstallEnv_Execution()
 {
+	echo -e "\033[94m安装运行环境完毕。。。done...\033[0m"
 	if [ "$m_EnvRelease" -eq "1" ] ; then
 		dnf remove sdl2-compat -y
 		dnf install SDL2-devel opencv-devel ffmpeg-devel --allowerasing -y
@@ -84,13 +93,12 @@ function InstallEnv_Execution()
     	dpkg -i ./tsduck.ubuntu24_amd64.deb ./tsduck-dev.ubuntu24_amd64.deb
     	apt -f install -y
 	elif [ "$m_EnvRelease" -eq "3" ] ; then 
-		echo -e "not support"
+		brew install openssl@3 opencv sdl2 tsduck
 	else
 		echo -e "not support"
 	fi
 }
 
-InstallEnv_CheckRoot
 InstallEnv_CheckSystem
 InstallEnv_XEngine
 InstallEnv_Execution
