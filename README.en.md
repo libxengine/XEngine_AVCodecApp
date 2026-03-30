@@ -18,7 +18,9 @@ This program can handle your various requests. It is the core of everything. You
 ###### How to Use
 You should refer to the protocol document. First, use `create` to create a handle, then set the codec interface (skip if codec is not needed), then create the image filter processing interface (skip if not needed; this interface is only effective if codec is enabled), and then you can call `play` to schedule programs.
 You can also implement your own program to schedule playback programs periodically. This is our recommended approach.
-Finally, call `stop` when it is no longer needed.
+
+###### Used in combination
+This software requires a streaming media service. If you want to conduct live stream pushing, you can use our XEngine_StreamMedia service, or third-party streaming media servers like SRS. Just specify this service address when calling our stream creation interface to push the stream
 
 #### XEngine_AVToolApp
 This software is a collection of tools, primarily communicating with XEngine_AVCodecApp to perform file transcoding. This tool can uniformly transcode or remux media files from multiple folders.
@@ -60,6 +62,7 @@ Software Features:
 19. Supports playback scheduling and timed playback.
 20. AI Support.
 21. Mute and Black Screen Support.
+22. cloud of av codec support
 
 ## Installation
 
@@ -67,11 +70,11 @@ Software Features:
 Run directly.
 
 #### Linux
-Requires Ubuntu 24.04 LTS. First, run the environment setup script AVCodec_ENVInstall.sh.
+Requires Ubuntu 24.04 LTS or rockylinux 10. First, run the environment setup script AVCodec_ENVInstall.sh.
 Then you can run `./XEngine_AVCodecApp` for testing.
 
 #### macOS
-Not currently supported.
+Just run the installation script directly, and the rest is the same as on Linux
 
 ## Registration
 Our software requires registration for use. Please contact us to register.  
