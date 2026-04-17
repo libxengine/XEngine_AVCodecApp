@@ -1,7 +1,8 @@
 [Chinese](README.md) || [English](README.en.md)
 # XEngine_AVCodecApp
 General Audio/Video Codec Tool,General Audio/Video Transcoding Tool,Audio/Video Transcoding Service,Audio/Video Encoding/Decoding Service
-XEngine_AVCodecApp is a background service-based streaming media push/pull service for audio and video. It is not a streaming media server; it is a push/pull relay service that supports codecs, which can assist you in processing streaming media audio and video data.
+XEngine_AVCodecApp is a background service-based streaming media push/pull service for audio and video. It is not a streaming media server; it is a push/pull relay service that supports codecs, which can assist you in processing streaming media audio and video data.  
+The core functions of XEngine_AVCodecApp are audio and video transcoding, stream pushing and pulling, video recording, FAST live streaming/loop streaming, transcoding image processing, and AI audio and video
 
 ## Introduction
 Why develop this tool? Streaming media servers are already very mature and plentiful on the market. Therefore, we are not focusing on the streaming media service itself, but rather on derivative products, such as this software.
