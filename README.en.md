@@ -35,6 +35,11 @@ This tool only supports Windows.
 *   Stable & Reliable: Implemented in C/C++, core framework validated over 10+ years. Balances stability and high performance.
 *   Flexible Licensing: Supports various license types, including time-limited and usage-based models.
 
+#### Why Use This Software
+Traditional backend open-source streaming media servers (such as XEngine_StreamMedia, SRS, etc.) typically focus on network-layer protocol parsing and stream forwarding. Their core responsibility is to efficiently handle stream publishing and pulling, rather than deep audio and video data processing.  
+This software, however, is positioned as an independent audio/video stream pre-processing tool. Its core function is to perform flexible secondary processing on the streaming media before it is pushed to the server. For example: transcoding, customizing bitrate and resolution, and applying image filters (such as overlaying images or text watermarks). After pre-processing by this software, the standard media stream is then pushed to the backend streaming media server.  
+This design achieves the decoupling of "stream processing" from "stream distribution". Compared to directly modifying the source code of the underlying streaming media server for custom development, this architecture is much more elegant and flexible, significantly reducing both development and maintenance costs.  
+
 #### Choose the Right One
 Most products on the market are either paid, have slow updates, lack features, or offer no technical support. By using our product, you don't need to worry about these aspects.
 

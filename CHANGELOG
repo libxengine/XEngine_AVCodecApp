@@ -1,3 +1,31 @@
+XEngine_AVCodecApp V2.1.0.1001
+
+Added: M3U8 multi-bitrate output configuration
+Added: Retry support to skip successfully processed files
+Changed: Disable configuration changes during transcoding
+Changed: Optimized display of dubbing languages in cloud transcoding
+Optimized: Removed redundant code
+Optimized: UI control association logic code for cloud transcoding
+Fixed: Compatibility issues with certain audio formats
+Fixed: Deadlock issue during transcoding process
+Fixed: Optimized progress notifications for multi-handle transcoding services
+Fixed: Incomplete processing issue during simultaneous multiple transcoding tasks
+Fixed: Output folder issue
+Fixed: Transcoding skip issue
+
+增加:M3U8多码率输出配置
+增加:重试支持跳过成功的文件
+修改:转码过程禁用配置改变
+修改:云转码配音语言优化显示
+优化:删除一些多余代码
+优化:云转码逻辑控件关联代码
+修改:某些音频格式兼容问题
+修正:转码过程死锁问题
+修正:多句柄转码服务进度通知优化
+修正:同时多转码不完整问题
+修正:输出文件夹问题
+修正:转码跳过问题
+========================================================================
 XEngine_AVCodecApp V1.6.4.1001
 
 Added: Limit UDP output packet size
