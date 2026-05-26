@@ -100,7 +100,9 @@ XEngine_AVCodecApp是核心程序,他提供了对音视频的编解码,拉流推
 ![输入图片说明](picture/2.png "在这里输入图片标题")
 ![输入图片说明](picture/3.png "在这里输入图片标题")
 
-## 发展历程
+## 目录结构
+- AVCodec_APPExample   服务端通信转码示例
+- XEngine_Package      环境安装包
 
 ## 关注我们
 如果你觉得这个软件对你有帮助,请你给我们一个START吧  

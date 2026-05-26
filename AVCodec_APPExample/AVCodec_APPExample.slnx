@@ -1,0 +1,8 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="AVCodec_APPExample/AVCodec_APPExample.vcxproj" Id="d287cd88-525c-49e9-9dec-85a11a535029" />
+  <Project Path="jsoncpp/jsoncpp.vcxproj" Id="f1736b3f-03a2-4fc7-b045-a12ba8d724fb" />
+</Solution>
