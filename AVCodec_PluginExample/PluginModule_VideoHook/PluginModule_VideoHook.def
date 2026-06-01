@@ -1,0 +1,9 @@
+LIBRARY
+
+EXPORTS
+	PluginCore_GetLastError
+
+	PluginCore_Init
+	PluginCore_UnInit
+	PluginCore_GetInfo
+	PluginCore_Call

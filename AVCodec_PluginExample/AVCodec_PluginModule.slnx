@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="PluginModule_VideoHook/PluginModule_VideoHook.vcxproj" Id="0f5b5423-3dd4-4e96-9fe3-f04c2d20de1a" />
+</Solution>
