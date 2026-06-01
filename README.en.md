@@ -8,8 +8,13 @@ The core functions of XEngine_AVCodecApp are audio and video transcoding, stream
 Why develop this tool? Streaming media servers are already very mature and plentiful on the market. Therefore, we are not focusing on the streaming media service itself, but rather on derivative products, such as this software.
 This software is primarily designed to assist existing streaming media servers because they typically only handle data forwarding and demuxing. They generally do not support audio/video codecs or image processing, such as overlaying images or text.
 So, we provide this software to assist users who have requirements for processing audio and video.
-Simply put, with this program, you can pull a live stream from your camera or other live source, process it through our program (including re-encoding, e.g., modifying resolution, bitrate, frame rate), and then push it directly to a streaming media server. If you don't want to pull data from a camera, you can seamlessly switch to a video file without interrupting the playback for the viewer. You can use the HTTP API interface to add a replay text overlay to the output video during the switch.
+To put it simply, this program allows you to pull your camera, other live streams, or media files through it, then process them with our program for re-encoding and decoding, such as modifying resolution, bitrate, and frame rate, before pushing the stream to the media server. It can switch files seamlessly without causing playback interruptions. It also supports plugins; we can provide raw YUV data as input to the plugins, and after you process it, return it to the transcoding service for encoding and streaming.  
 It consists of two programs: XEngine_AVCodecApp and XEngine_AVToolApp.
+
+#### Why Use This Software
+Traditional backend open-source streaming media servers (such as XEngine_StreamMedia, SRS, etc.) typically focus on network-layer protocol parsing and stream forwarding. Their core responsibility is to efficiently handle stream publishing and pulling, rather than deep audio and video data processing.  
+This software, however, is positioned as an independent audio/video stream pre-processing tool. Its core function is to perform flexible secondary processing on the streaming media before it is pushed to the server. For example: transcoding, customizing bitrate and resolution, and applying image filters (such as overlaying images or text watermarks). After pre-processing by this software, the standard media stream is then pushed to the backend streaming media server.  
+This design achieves the decoupling of "stream processing" from "stream distribution". Compared to directly modifying the source code of the underlying streaming media server for custom development, this architecture is much more elegant and flexible, significantly reducing both development and maintenance costs.  
 
 #### XEngine_AVCodecApp
 XEngine_AVCodecApp is the core program. It provides audio/video codecs, stream pulling/pushing, audio/video filters, and OpenCV-based video image processing. It also offers an HTTP interface service to operate this server.
@@ -34,11 +39,6 @@ This tool only supports Windows.
 *   Language Agnostic: Regardless of the language your client uses, you can choose the appropriate communication method.
 *   Stable & Reliable: Implemented in C/C++, core framework validated over 10+ years. Balances stability and high performance.
 *   Flexible Licensing: Supports various license types, including time-limited and usage-based models.
-
-#### Why Use This Software
-Traditional backend open-source streaming media servers (such as XEngine_StreamMedia, SRS, etc.) typically focus on network-layer protocol parsing and stream forwarding. Their core responsibility is to efficiently handle stream publishing and pulling, rather than deep audio and video data processing.  
-This software, however, is positioned as an independent audio/video stream pre-processing tool. Its core function is to perform flexible secondary processing on the streaming media before it is pushed to the server. For example: transcoding, customizing bitrate and resolution, and applying image filters (such as overlaying images or text watermarks). After pre-processing by this software, the standard media stream is then pushed to the backend streaming media server.  
-This design achieves the decoupling of "stream processing" from "stream distribution". Compared to directly modifying the source code of the underlying streaming media server for custom development, this architecture is much more elegant and flexible, significantly reducing both development and maintenance costs.  
 
 #### Choose the Right One
 Most products on the market are either paid, have slow updates, lack features, or offer no technical support. By using our product, you don't need to worry about these aspects.
@@ -69,6 +69,7 @@ Software Features:
 20. AI Support.
 21. Mute and Black Screen Support.
 22. cloud of av codec support
+23. audio and video and http plugin support
 
 ## Installation
 
