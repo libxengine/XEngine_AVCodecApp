@@ -106,8 +106,8 @@ can also provide core source code; the specific price can be discussed by contac
 ![Screenshot 3](picture/7.png "Screenshot 3 Title")
 
 #### struct pic
-![Screenshot 1](picture/streamprotocol.png "Screenshot 1 Title")
-![Screenshot 2](picture/structstream.png "Screenshot 2 Title")
+![Screenshot 1](picture/streamprotocol.jpg "Screenshot 1 Title")
+![Screenshot 2](picture/structstream.jpg "Screenshot 2 Title")
 
 ## Dir struct
 - AVCodec_APPExample   example for avcodec 
