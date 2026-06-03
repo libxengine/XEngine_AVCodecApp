@@ -1,3 +1,17 @@
+XEngine_AVCodecApp V2.2.1.1001
+
+Add: right-click menu function
+Update: Upgrade ffmpeg version
+Modify: Permission Adjustment
+Modify: Cloud Transcoding Configuration Processing
+Fix: The problem of merging video dynamic frame rate
+
+增加:右键菜单功能
+更新:升级ffmpeg版本
+修改:权限调整
+修改:云转码配置处理
+修正:合并视频动态帧率问题
+========================================================================
 XEngine_AVCodecApp V2.1.0.1001
 
 Added: M3U8 multi-bitrate output configuration
