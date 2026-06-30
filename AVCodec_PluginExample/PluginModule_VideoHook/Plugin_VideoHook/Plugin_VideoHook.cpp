@@ -52,6 +52,19 @@ void CPlugin_VideoHook::PluginCore_UnInit()
 	VideoHook_IsErrorOccur = false;
 }
 /********************************************************************
+函数名称：PluginCore_RegisterType
+函数功能：注册插件类型
+返回值
+  类型：整数
+  意思：插件类型,0无效,1视频,2音频
+备注：
+*********************************************************************/
+int CPlugin_VideoHook::PluginCore_RegisterType()
+{
+	VideoHook_IsErrorOccur = false;
+	return 1;
+}
+/********************************************************************
 函数名称：PluginCore_GetInfo
 函数功能：获取插件基础信息函数
  参数.一：ptszPluginName
@@ -108,9 +121,9 @@ bool CPlugin_VideoHook::PluginCore_Call(XCHAR* ptszMsgBuffer, int* pInt_MsgLen, 
 	}
 	for (int i = 0; i < nInputPCount; i++)
 	{
-		_xstprintf(ptszMsgBuffer, _X("Input Parameter %d: %s"), i + 1, (*pppInputParameters)[i]);
+		_xtprintf(_X("Input Parameter %d: %s\r\n"), i + 1, (*pppInputParameters)[i]);
 	}
-
+	_xtprintf(_X("%d\r\n"), *pInt_MsgLen);
 	return true;
 }
 //////////////////////////////////////////////////////////////////////////
