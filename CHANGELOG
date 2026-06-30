@@ -1,3 +1,17 @@
+XEngine_AVCodecApp V2.2.5.1001
+
+Add: SCTE-35 ad marker function
+Modified: Superimposed text borders now support solid styles
+Fix: Progress bar issue
+Fixed: Process residency issue when verification fails sometimes
+Fix: The issue where the coordinate system for image text overlay is incorrect
+
+增加:SCTE-35 广告打点功能
+修改:叠加的文本边框现在支持实心了
+修正:进度条问题
+修正:某些时候验证失败进程驻留问题
+修正:图像文本叠加坐标系不正确的问题
+========================================================================
 XEngine_AVCodecApp V2.2.1.1001
 
 Add: right-click menu function
