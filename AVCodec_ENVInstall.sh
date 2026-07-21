@@ -93,7 +93,7 @@ function InstallEnv_Execution()
     	dpkg -i ./tsduck.ubuntu24_amd64.deb ./tsduck-dev.ubuntu24_amd64.deb
     	apt -f install -y
 	elif [ "$m_EnvRelease" -eq "3" ] ; then 
-		brew install openssl@3 opencv sdl2 tsduck
+		brew install openssl@3 opencv@4 sdl2 tsduck
 	else
 		echo -e "not support"
 	fi

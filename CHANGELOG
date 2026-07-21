@@ -1,3 +1,9 @@
+XEngine_AVCodecApp V2.2.7.1001
+
+更新:依赖库版本
+优化:SCTE广告打点支持自定义URL地址了
+优化:项目字符集优化
+========================================================================
 XEngine_AVCodecApp V2.2.5.1001
 
 Add: SCTE-35 ad marker function
