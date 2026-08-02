@@ -6,12 +6,10 @@
 
 #ifndef PCH_H
 #define PCH_H
-#ifdef _MSC_BUILD
-// 添加要在此处预编译的标头
 #define _CRT_SECURE_NO_WARNINGS
+// 添加要在此处预编译的标头
 #include "framework.h"
 #include <tchar.h>
-#endif
 #endif //PCH_H
 #include <string>
 #include <XEngine_Include/XEngine_CommHdr.h>
@@ -22,12 +20,12 @@
 #include <XEngine_Include/XEngine_AVCodec/VideoCodec_Define.h>
 #include <XEngine_Include/XEngine_AVCodec/AVHelp_Define.h>
 #include <XEngine_Include/XEngine_AVCodec/AVHelp_Error.h>
-#include "PluginVideo_Define.h"
-#include "PluginVideo_Error.h"
+#include "PluginAudio_Define.h"
+#include "PluginAudio_Error.h"
 /********************************************************************
-//    Created:     2026/06/01  00:00:00
-//    File Name:   D:\XEngine_AVCodecApp\AVCodec_PluginExample\PluginModule_VideoHook\pch.h
-//    File Path:   D:\XEngine_AVCodecApp\AVCodec_PluginExample\PluginModule_VideoHook
+//    Created:     2026/08/02  15:00:00
+//    File Name:   D:\XEngine_AVCodecApp\AVCodec_PluginExample\PluginModule_AudioHook\pch.h
+//    File Path:   D:\XEngine_AVCodecApp\AVCodec_PluginExample\PluginModule_AudioHook
 //    File Base:   pch
 //    File Ext:    h
 //    Project:     XEngine_AVCodecApp(音视频编解码插件示例)
@@ -35,8 +33,8 @@
 //    Purpose:     公用头文件
 //    History:
 *********************************************************************/
-extern bool VideoHook_IsErrorOccur;
-extern XLONG VideoHook_dwErrorCode;
+extern bool AudioHook_IsErrorOccur;
+extern XLONG AudioHook_dwErrorCode;
 
 
 #ifdef _MSC_BUILD

@@ -1,21 +1,21 @@
 ﻿#pragma once
 /********************************************************************
-//    Created:     2026/06/01  11:00:00
-//    File Name:   D:\XEngine_AVCodecApp\AVCodec_PluginExample\PluginModule_VideoHook\Plugin_VideoHook\Plugin_VideoHook.h
-//    File Path:   D:\XEngine_AVCodecApp\AVCodec_PluginExample\PluginModule_VideoHook\Plugin_VideoHook
-//    File Base:   Plugin_VideoHook
+//    Created:     2026/08/02  15:00:00
+//    File Name:   D:\XEngine_AVCodecApp\AVCodec_PluginExample\PluginModule_AudioHook\Plugin_AudioHook\Plugin_AudioHook.h
+//    File Path:   D:\XEngine_AVCodecApp\AVCodec_PluginExample\PluginModule_AudioHook\Plugin_AudioHook
+//    File Base:   Plugin_AudioHook
 //    File Ext:    h
 //    Project:     XEngine_AVCodecApp (AV 编解码插件示例)
 //    Author:      qyt
-//    Purpose:     视频钩子插件头文件
+//    Purpose:     音频钩子插件头文件
 //    History:
 *********************************************************************/
 
-class CPlugin_VideoHook
+class CPlugin_AudioHook
 {
 public:
-	CPlugin_VideoHook();
-	~CPlugin_VideoHook();
+	CPlugin_AudioHook();
+	~CPlugin_AudioHook();
 public:
 	bool PluginCore_Init(XENGINE_PLUGINPARAM *pSt_PluginParameter);
 	void PluginCore_UnInit();

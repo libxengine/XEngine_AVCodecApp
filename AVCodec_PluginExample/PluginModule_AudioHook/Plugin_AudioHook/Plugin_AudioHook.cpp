@@ -1,20 +1,20 @@
 ﻿#include "pch.h"
-#include "Plugin_VideoHook.h"
+#include "Plugin_AudioHook.h"
 /********************************************************************
-//    Created:     2022/04/21  15:52:19
-//    File Name:   D:\XEngine_AVCodecApp\AVCodec_PluginExample\PluginModule_VideoHook\Plugin_VideoHook\Plugin_VideoHook.cpp
-//    File Path:   D:\XEngine_AVCodecApp\AVCodec_PluginExample\PluginModule_VideoHook\Plugin_VideoHook
-//    File Base:   Plugin_VideoHook
+//    Created:     2026/08/02  15:00:19
+//    File Name:   D:\XEngine_AVCodecApp\AVCodec_PluginExample\PluginModule_AudioHook\Plugin_AudioHook\Plugin_AudioHook.cpp
+//    File Path:   D:\XEngine_AVCodecApp\AVCodec_PluginExample\PluginModule_AudioHook\Plugin_AudioHook
+//    File Base:   Plugin_AudioHook
 //    File Ext:    cpp
 //    Project:     XEngine_AVCodecApp (AV 编解码插件示例)
 //    Author:      qyt
-//    Purpose:     视频钩子插件实现
+//    Purpose:     音频钩子插件实现
 //    History:
 *********************************************************************/
-CPlugin_VideoHook::CPlugin_VideoHook()
+CPlugin_AudioHook::CPlugin_AudioHook()
 {
 }
-CPlugin_VideoHook::~CPlugin_VideoHook()
+CPlugin_AudioHook::~CPlugin_AudioHook()
 {
 }
 //////////////////////////////////////////////////////////////////////////
@@ -33,11 +33,11 @@ CPlugin_VideoHook::~CPlugin_VideoHook()
   意思：是否成功
 备注：
 *********************************************************************/
-bool CPlugin_VideoHook::PluginCore_Init(XENGINE_PLUGINPARAM *pSt_PluginParameter)
+bool CPlugin_AudioHook::PluginCore_Init(XENGINE_PLUGINPARAM *pSt_PluginParameter)
 {
-	VideoHook_IsErrorOccur = false;
+	AudioHook_IsErrorOccur = false;
 
-	pSt_File = _xtfopen(_X("VideoHook.yuv"), _X("wb"));
+	pSt_File = _xtfopen(_X("Audio.pcm"), _X("wb"));
     return true;
 }
 /********************************************************************
@@ -48,9 +48,9 @@ bool CPlugin_VideoHook::PluginCore_Init(XENGINE_PLUGINPARAM *pSt_PluginParameter
   意思：
 备注：
 *********************************************************************/
-void CPlugin_VideoHook::PluginCore_UnInit()
+void CPlugin_AudioHook::PluginCore_UnInit()
 {
-	VideoHook_IsErrorOccur = false;
+	AudioHook_IsErrorOccur = false;
 
 	fclose(pSt_File);
 }
@@ -62,11 +62,11 @@ void CPlugin_VideoHook::PluginCore_UnInit()
   意思：插件类型,0无效,1视频,2音频
 备注：
 *********************************************************************/
-int CPlugin_VideoHook::PluginCore_RegisterType()
+int CPlugin_AudioHook::PluginCore_RegisterType()
 {
-	VideoHook_IsErrorOccur = false;
+	AudioHook_IsErrorOccur = false;
 
-	return 1;
+	return 2;
 }
 /********************************************************************
 函数名称：PluginCore_GetInfo
@@ -96,14 +96,14 @@ int CPlugin_VideoHook::PluginCore_RegisterType()
   意思：是否成功
 备注：
 *********************************************************************/
-void CPlugin_VideoHook::PluginCore_GetInfo(XCHAR* ptszPluginName, XCHAR* ptszPluginVersion, XCHAR* ptszPluginAuthor, XCHAR* ptszPluginDesc)
+void CPlugin_AudioHook::PluginCore_GetInfo(XCHAR* ptszPluginName, XCHAR* ptszPluginVersion, XCHAR* ptszPluginAuthor, XCHAR* ptszPluginDesc)
 {
-	VideoHook_IsErrorOccur = false;
+	AudioHook_IsErrorOccur = false;
 	
-	_tcsxcpy(ptszPluginName, "videohook");
+	_tcsxcpy(ptszPluginName, "audiohook");
 	_tcsxcpy(ptszPluginVersion, "1.0.0.1001");
 	_tcsxcpy(ptszPluginAuthor, "xengine");
-	_tcsxcpy(ptszPluginDesc, "Video Hook Plugin for XEngine API Service");
+	_tcsxcpy(ptszPluginDesc, "Audio Hook Plugin for XEngine API Service");
 }
 /********************************************************************
 函数名称：PluginCore_Call
@@ -113,26 +113,24 @@ void CPlugin_VideoHook::PluginCore_GetInfo(XCHAR* ptszPluginName, XCHAR* ptszPlu
   意思：是否成功
 备注：
 *********************************************************************/
-bool CPlugin_VideoHook::PluginCore_Call(XCHAR* ptszMsgBuffer, int* pInt_MsgLen, LPCXSTR lpszMsgBufer, int nMsgLen, XCHAR*** pppInputParameters, int nInputPCount, XCHAR*** pppOutputParameters, int* pInt_OutputPCount)
+bool CPlugin_AudioHook::PluginCore_Call(XCHAR* ptszMsgBuffer, int* pInt_MsgLen, LPCXSTR lpszMsgBufer, int nMsgLen, XCHAR*** pppInputParameters, int nInputPCount, XCHAR*** pppOutputParameters, int* pInt_OutputPCount)
 {
-	VideoHook_IsErrorOccur = false;
+	AudioHook_IsErrorOccur = false;
 
 	if ((NULL == ptszMsgBuffer) || (NULL == pInt_MsgLen))
 	{
-		VideoHook_IsErrorOccur = true;
-		VideoHook_dwErrorCode = ERROR_AVCODEC_PLUGIN_MODULE_VIDEOHOOK_PARAMENT;
+		AudioHook_IsErrorOccur = true;
+		AudioHook_dwErrorCode = ERROR_AVCODEC_PLUGIN_MODULE_AUDIOHOOK_PARAMENT;
 		return false;
 	}
-	//does not use
 	return true;
 }
-bool CPlugin_VideoHook::PluginCore_Call2(XHANDLE phBuffer)
+bool CPlugin_AudioHook::PluginCore_Call2(XHANDLE phBuffer)
 {
-	VideoHook_IsErrorOccur = false;
-	// phBuffer == AVFrame 
-	// we convert xengine data format or raw data and write file yuv
+	AudioHook_IsErrorOccur = false;
+
 	XENGINE_MSGBUFFER st_AVBuffer = {};
-	AVHelp_Memory_GetVideoBuffer(phBuffer, &st_AVBuffer, false);
+	AVHelp_Memory_GetAudioBuffer(phBuffer, &st_AVBuffer, false);
 	fwrite(st_AVBuffer.unData.ptszMSGBuffer, 1, st_AVBuffer.nMSGLen[0], pSt_File);
 	BaseLib_Memory_MSGFree(&st_AVBuffer);
 	return true;

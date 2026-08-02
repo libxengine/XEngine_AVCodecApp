@@ -1,14 +1,14 @@
 ﻿#pragma once
 /********************************************************************
-//    Created:     2026/06/01  00:00:00
-//    File Name:   D:\XEngine_AVCodecApp\AVCodec_PluginExample\PluginModule_VideoHook\PluginVideo_Define.h
-//    File Path:   D:\XEngine_AVCodecApp\AVCodec_PluginExample\PluginModule_VideoHook
-//    File Base:   PluginVideo_Define
+//    Created:     2026/08/02  15:00:00
+//    File Name:   D:\XEngine_AVCodecApp\AVCodec_PluginExample\PluginModule_AudioHook\PluginAudio_Define.h
+//    File Path:   D:\XEngine_AVCodecApp\AVCodec_PluginExample\PluginModule_AudioHook
+//    File Base:   PluginAudio_Define
 //    File Ext:    h
 //    Project:     XEngine_AVCodecApp
 //    Author:      qyt
-//    Purpose:     视频钩子插件导出定义
-//    History:
+//    Purpose:     音频钩子插件导出定义
+//    History:     2026/08/02  同步为最新信息
 *********************************************************************/
 typedef struct
 {
