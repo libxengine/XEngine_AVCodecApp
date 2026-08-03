@@ -10,8 +10,8 @@ void AVConfig_Packet(XENGINE_AVCONFIGINFO *pSt_AVProtocol)
 	pSt_AVProtocol->st_AVVideo.enAVCodec = 27;  //H264
 	pSt_AVProtocol->st_AVVideo.nBFrame = 0;
 	pSt_AVProtocol->st_AVVideo.nGOPSize = 60;
-	pSt_AVProtocol->st_AVVideo.nWidth = 1280;
-	pSt_AVProtocol->st_AVVideo.nHeight = 720;
+	pSt_AVProtocol->st_AVVideo.nWidth = 1080;
+	pSt_AVProtocol->st_AVVideo.nHeight = 1920;
 	pSt_AVProtocol->st_AVVideo.nFormat = 0;
 	pSt_AVProtocol->st_AVVideo.nFrameBase = 1;
 	pSt_AVProtocol->st_AVVideo.nFrameRate = 30;
@@ -81,9 +81,9 @@ int main()
 {
 	bool bIsMerge = false;         //是不是合并
 	XNETHANDLE xhToken = 0;              //转码TOKEN
-	LPCXSTR lpszCreateName = _X("G:\\output.mp4");     //创建转码的目标地址
+	LPCXSTR lpszCreateName = _X("D:\\Output\\output.mp4");     //创建转码的目标地址
 	LPCXSTR lpszCreateFmt = _X("mp4");     //创建转码的媒体格式
-	LPCXSTR lpszSourceFile = _X("G:\\1.mp4");     //转码的源文件地址
+	LPCXSTR lpszSourceFile = _X("D:\\Input\\1.mp4");     //转码的源文件地址
 
 	XENGINE_AVCONFIGINFO st_AVProtocol = {};
 	XENGINE_CVCONFIGURE st_CVProtocol = {};

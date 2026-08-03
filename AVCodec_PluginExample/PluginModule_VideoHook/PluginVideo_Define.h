@@ -92,4 +92,4 @@ extern "C" void PluginCore_GetInfo(XCHAR* ptszPluginName, XCHAR* ptszPluginVersi
 备注：
 *********************************************************************/
 extern "C" bool PluginCore_Call(XCHAR* ptszMsgBuffer, int* pInt_MsgLen, LPCXSTR lpszMsgBufer = NULL, int nMsgLen = 0, XCHAR*** pppInputParameters = NULL, int nInputPCount = 0, XCHAR*** pppOutputParameters = NULL, int* pInt_OutputPCount = NULL);
-extern "C" bool PluginCore_Call2(XHANDLE phBuffer);
+extern "C" bool PluginCore_Call2(XHANDLE*** ppphBuffer);

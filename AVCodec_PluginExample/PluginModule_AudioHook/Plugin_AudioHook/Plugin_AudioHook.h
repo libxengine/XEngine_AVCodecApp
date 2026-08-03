@@ -22,7 +22,7 @@ public:
 	int PluginCore_RegisterType();
 	void PluginCore_GetInfo(XCHAR* ptszPluginName, XCHAR* ptszPluginVersion, XCHAR* ptszPluginAuthor, XCHAR* ptszPluginDesc);
 	bool PluginCore_Call(XCHAR* ptszMsgBuffer, int* pInt_MsgLen, LPCXSTR lpszMsgBufer = NULL, int nMsgLen = 0, XCHAR*** pppInputParameters = NULL, int nInputPCount = 0, XCHAR*** pppOutputParameters = NULL, int* pInt_OutputPCount = NULL);
-	bool PluginCore_Call2(XHANDLE phBuffer);
+	bool PluginCore_Call2(XHANDLE*** ppphBuffer);
 protected:
 	
 private:

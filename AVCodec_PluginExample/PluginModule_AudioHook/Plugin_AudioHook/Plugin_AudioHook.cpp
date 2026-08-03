@@ -125,12 +125,12 @@ bool CPlugin_AudioHook::PluginCore_Call(XCHAR* ptszMsgBuffer, int* pInt_MsgLen, 
 	}
 	return true;
 }
-bool CPlugin_AudioHook::PluginCore_Call2(XHANDLE phBuffer)
+bool CPlugin_AudioHook::PluginCore_Call2(XHANDLE*** ppphBuffer)
 {
 	AudioHook_IsErrorOccur = false;
 
 	XENGINE_MSGBUFFER st_AVBuffer = {};
-	AVHelp_Memory_GetAudioBuffer(phBuffer, &st_AVBuffer, false);
+	AVHelp_Memory_GetAudioBuffer((*ppphBuffer)[0], &st_AVBuffer, false);
 	fwrite(st_AVBuffer.unData.ptszMSGBuffer, 1, st_AVBuffer.nMSGLen[0], pSt_File);
 	BaseLib_Memory_MSGFree(&st_AVBuffer);
 	return true;

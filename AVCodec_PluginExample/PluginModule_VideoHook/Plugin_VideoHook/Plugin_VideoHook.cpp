@@ -126,13 +126,13 @@ bool CPlugin_VideoHook::PluginCore_Call(XCHAR* ptszMsgBuffer, int* pInt_MsgLen, 
 	//does not use
 	return true;
 }
-bool CPlugin_VideoHook::PluginCore_Call2(XHANDLE phBuffer)
+bool CPlugin_VideoHook::PluginCore_Call2(XHANDLE*** ppphBuffer)
 {
 	VideoHook_IsErrorOccur = false;
 	// phBuffer == AVFrame 
 	// we convert xengine data format or raw data and write file yuv
 	XENGINE_MSGBUFFER st_AVBuffer = {};
-	AVHelp_Memory_GetVideoBuffer(phBuffer, &st_AVBuffer, false);
+	AVHelp_Memory_GetVideoBuffer((*ppphBuffer)[0], &st_AVBuffer, false);
 	fwrite(st_AVBuffer.unData.ptszMSGBuffer, 1, st_AVBuffer.nMSGLen[0], pSt_File);
 	BaseLib_Memory_MSGFree(&st_AVBuffer);
 	return true;

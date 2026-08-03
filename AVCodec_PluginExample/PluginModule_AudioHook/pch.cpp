@@ -45,7 +45,7 @@ extern "C" bool PluginCore_Call(XCHAR* ptszMsgBuffer, int* pInt_MsgLen, LPCXSTR 
 {
 	return m_PluginAudioHook.PluginCore_Call(ptszMsgBuffer, pInt_MsgLen, lpszMsgBufer, nMsgLen, pppInputParameters, nInputPCount, pppOutputParameters, pInt_OutputPCount);
 }
-extern "C" bool PluginCore_Call2(XHANDLE phBuffer)
+extern "C" bool PluginCore_Call2(XHANDLE*** ppphBuffer)
 {
-	return m_PluginAudioHook.PluginCore_Call2(phBuffer);
+	return m_PluginAudioHook.PluginCore_Call2(ppphBuffer);
 }
