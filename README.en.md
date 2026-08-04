@@ -71,6 +71,7 @@ Software Features:
 22. cloud of av codec support
 23. audio and video and http plugin support
 24. TS-based SCTE-35 stream protocol format output support
+25. Support TS-based multicast, broadcast streaming push and streaming pull
 
 ## Installation
 
