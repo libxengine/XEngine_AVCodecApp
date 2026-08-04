@@ -4,13 +4,15 @@ XEngine_AVCodecApp V2.3.0.1001
 修改:avhelp 模块代码合并到编解码模块中
 修改:编译选项导致的问题
 更新:发布文件夹结构
+更新:依赖库
 删除:注册程序，不在需要
 
-Update: Improved audio and video plugin processing workflow
-Modify: Merge the avhelp module code into the codec module
-Modified: Problem caused by compilation options
-Update: Release Folder Structure
-Delete: Registration procedure, no longer needed
+Modify:Merge the avhelp module code into the codec module
+Modified:Improved audio and video plugin processing workflow
+Modified:Problem caused by compilation options
+update:denpend library
+Update:Release Folder Structure
+Delete:Registration procedure, no longer needed
 ========================================================================
 XEngine_AVCodecApp V2.2.7.1001
 
