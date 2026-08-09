@@ -88,14 +88,14 @@ Just run the installation script directly, and the rest is the same as on Linux
 ## Registration
 Our software requires registration for use. Please contact us to register.  
 - Trial Version: Free, provides format re-muxing only
-- Standard Version: ¥200/year, provides encoding/decoding services
-- Professional Version: ¥300/year, provides filter and effects support
-- Ultimate Version: ¥500/year, provides AI detection and processing support
-- Unlimited Version: ¥1000 one-time, no time limitations
+- Standard Version: $20/year, provides encoding/decoding services
+- Professional Version: $30/year, provides filter and effects support
+- Ultimate Version: $100/year, provides AI detection and processing support
+- Unlimited Version: $200 one-time, no time limitations
 You can also try the trial version. The trial version does not support codecs, filters, or image processing.ai need unilimit version.
 
 #### get more?
-We can also provide the source code of the transcoding tool (2000).  
+We can also provide the source code of the transcoding tool.  
 can also provide core source code; the specific price can be discussed by contacting us
 
 ## Screenshots
