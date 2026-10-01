@@ -73,6 +73,7 @@ bool CAPPProtocol_Packet::APPProtocol_Packet_ToolCreate(XCHAR* ptszMSGBuffer, in
 	{
 		st_JsonRoot["streamtype"] = lpszDestType;
 	}
+	st_JsonRoot["bThumbnail"] = false;
 	st_JsonRoot["nHLSTime"] = nHLSTime;
 	st_JsonRoot["nTotalRate"] = nTotalRate;
 
@@ -227,6 +228,13 @@ bool CAPPProtocol_Packet::APPProtocol_Packet_ToolPlayer(XCHAR* ptszMSGBuffer, in
 	st_JsonRoot["sysstartime"] = lpszPlayerTime;
 	st_JsonRoot["avstarttime"];
 	st_JsonRoot["show"] = false;
+	st_JsonRoot["resettime"] = true;
+
+	st_JsonRoot["tszCaptureName"] = "desktop";
+	st_JsonRoot["tszCaptureType"] = "gdigrab";
+	st_JsonRoot["tszVideoSize"] = "1920x1080";
+	st_JsonRoot["nPosX"] = 0;
+	st_JsonRoot["nPosY"] = 0;
 
 	st_JsonWBuilder["emitUTF8"] = true;
 	*pInt_MSGLen = (int)Json::writeString(st_JsonWBuilder, st_JsonRoot).length();

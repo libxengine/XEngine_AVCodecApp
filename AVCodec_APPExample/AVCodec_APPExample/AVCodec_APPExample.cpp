@@ -10,8 +10,8 @@ void AVConfig_Packet(XENGINE_AVCONFIGINFO *pSt_AVProtocol)
 	pSt_AVProtocol->st_AVVideo.enAVCodec = 27;  //H264
 	pSt_AVProtocol->st_AVVideo.nBFrame = 0;
 	pSt_AVProtocol->st_AVVideo.nGOPSize = 60;
-	pSt_AVProtocol->st_AVVideo.nWidth = 1080;
-	pSt_AVProtocol->st_AVVideo.nHeight = 1920;
+	pSt_AVProtocol->st_AVVideo.nWidth = 1920;
+	pSt_AVProtocol->st_AVVideo.nHeight = 1080;
 	pSt_AVProtocol->st_AVVideo.nFormat = 0;
 	pSt_AVProtocol->st_AVVideo.nFrameBase = 1;
 	pSt_AVProtocol->st_AVVideo.nFrameRate = 30;
@@ -84,6 +84,7 @@ int main()
 	LPCXSTR lpszCreateName = _X("D:\\Output\\output.mp4");     //创建转码的目标地址
 	LPCXSTR lpszCreateFmt = _X("mp4");     //创建转码的媒体格式
 	LPCXSTR lpszSourceFile = _X("D:\\Input\\1.mp4");     //转码的源文件地址
+	//LPCXSTR lpszSourceFile = _X("local");     //本地设备
 
 	XENGINE_AVCONFIGINFO st_AVProtocol = {};
 	XENGINE_CVCONFIGURE st_CVProtocol = {};
@@ -250,6 +251,7 @@ int main()
 		memset(tszMSGBuffer, 0, XPATH_MAX);
 		memset(tszRequestStr, 0, XPATH_MAX);
 		_xstprintf(tszRequestStr, _X("http://127.0.0.1:5000/api?function=play&token=%lld"), xhToken);
+		
 		m_ProtocolPacket.APPProtocol_Packet_ToolPlayer(tszMSGBuffer, &nMSGLen, lpszSourceFile);
 		if (!APIClient_Http_Request(_X("POST"), tszRequestStr, tszMSGBuffer, NULL, &ptszMSGBuffer, &nMSGLen))
 		{
@@ -264,6 +266,7 @@ int main()
 		BaseLib_Memory_FreeCStyle((XPPMEM)&ptszMSGBuffer);
 		_xtprintf(_X("token:%lld:开始处理转码文件成功\n"), xhToken);
 	}
+	time_t nTimeStart = time(NULL);
 	std::this_thread::sleep_for(std::chrono::seconds(3));
 	while (true)
 	{
@@ -288,7 +291,7 @@ int main()
 		printf("%s\n", ptszMSGBuffer);
 
 		Json::Value st_JsonData = st_JsonRoot["data"];
-		if (0 == st_JsonData["nStatus"].asInt())
+		if (0 == st_JsonData["nStatus"].asInt() || time(NULL) - nTimeStart >= 30)
 		{
 			_xtprintf(_X("token:%lld:转码完成\n"), xhToken);
 
