@@ -72,6 +72,8 @@ Software Features:
 23. audio and video and http plugin support
 24. TS-based SCTE-35 stream protocol format output support
 25. Support TS-based multicast, broadcast streaming push and streaming pull
+26. audio and video plugin support
+27. screen and audio capture and live stream
 
 ## Installation
 
@@ -79,7 +81,7 @@ Software Features:
 Run directly.
 
 #### Linux
-Requires Ubuntu 24.04 LTS or rockylinux 10. First, run the environment setup script AVCodec_ENVInstall.sh.
+Requires Ubuntu 24.04 LTS or rockylinux 10 or macos arm64 system. First, run the environment setup script AVCodec_ENVInstall.sh.
 Then you can run `./XEngine_AVCodecApp` for testing.
 
 #### macOS

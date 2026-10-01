@@ -1,3 +1,20 @@
+XEngine_AVCodecApp V2.3.1.1001
+
+added:video thumbnail support 
+added:local screen and audio capture record support
+update:depend packetages
+improved:convert codec error print
+modify:install script and use lua instead luajit
+modify:Now supports outputting audio stream or video stream separately
+
+增加:创建视频缩略图支持
+增加:支持屏幕录制功能
+更新:依赖的三方库使用新版本
+更新:使用了新的C++20编译
+优化:转码过程错误输出
+修改:安装脚本和插件库的lua使用luajit
+修改:现在支持单独输出音频流或者视频流
+========================================================================
 XEngine_AVCodecApp V2.3.0.1001
 
 修改:音视频插件处理流程完善

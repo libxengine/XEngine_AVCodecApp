@@ -72,6 +72,8 @@ XEngine_AVCodecApp是核心程序,他提供了对音视频的编解码,拉流推
 23. 支持HTTP和音视频插件
 24. 基于TS的SCTE-35流协议格式输出支持
 25. 支持基于TS的组播和广播推流以及拉流
+26. 支持音视频插件开发
+27. 支持屏幕录制推流
 
 ## 安装教程
 
@@ -79,7 +81,7 @@ XEngine_AVCodecApp是核心程序,他提供了对音视频的编解码,拉流推
 直接运行即可
 
 #### Linux
-需要Ubuntu24.04 lts 或者rockylinux 10系统,首先执行环境安装AVCodec_ENVInstall.sh 脚本.  
+需要Ubuntu24.04 lts,或者rockylinux 10,或者macos arm64 系统,首先执行环境安装AVCodec_ENVInstall.sh 脚本.  
 然后可以运行 ./XEngine_AVCodecApp 服务进行测试
 
 #### Macos

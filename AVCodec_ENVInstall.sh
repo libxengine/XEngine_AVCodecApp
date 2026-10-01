@@ -86,14 +86,14 @@ function InstallEnv_Execution()
 	echo -e "\033[94m安装运行环境完毕。。。done...\033[0m"
 	if [ "$m_EnvRelease" -eq "1" ] ; then
 		dnf remove sdl2-compat -y
-		dnf install SDL2-devel opencv-devel ffmpeg-devel luajit-devel --allowerasing -y
+		dnf install ffmpeg-free-devel opencv-devel SDL2-devel luajit-devel --allowerasing -y
 		dnf install ./tsduck-el10.x86_64.rpm ./tsduck-devel-el10.x86_64.rpm -y
 	elif [ "$m_EnvRelease" -eq "2" ] ; then 
-		apt install libopencv-dev libopencv-videoio-dev libsdl2-dev libluajit-5.1-dev -y
+		apt install libopencv-dev libsdl2-dev libluajit-5.1-dev -y
     	dpkg -i ./tsduck.ubuntu24_amd64.deb ./tsduck-dev.ubuntu24_amd64.deb
     	apt -f install -y
 	elif [ "$m_EnvRelease" -eq "3" ] ; then 
-		brew install openssl@3 opencv@4 sdl2 tsduck luajit
+		brew install opencv@4 sdl2 luajit tsduck ffmpeg@8
 	else
 		echo -e "not support"
 	fi
