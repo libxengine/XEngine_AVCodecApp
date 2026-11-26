@@ -5,10 +5,10 @@ XEngine_AVCodecApp是一个基于后台服务的流媒体音视频的推拉流�
 XEngine_AVCodecApp核心功能就是音视频转码,推拉流,录像,FAST直播/轮播,转码图像处理和AI音视频
 
 ## 介绍
-为什么开发此工具?流媒体服务器目前市面上已经很成熟也很多了.所以我们不在关注流媒体服务这一块,而是关注衍生的一些产品,比如此软件.  
+流媒体服务器目前市面上已经很成熟也很多了.所以我们不在关注流媒体服务这一块,而是关注衍生的一些产品,比如此软件.  
 这个软件主要是为了辅助现在流媒体服务器,因为他们仅做数据转发和解封装,他们基本不支持音视频编解码,也不支持图像处理,比如叠加图片,文本等  
-所以我们提供了此软件来协助对音视频有处理需求的用户.  
 简单一点说,就是此程序你可以把你的摄像头或者其他直播流或者媒体文件通过此程序拉下来,然后通过我们程序处理重新编解码,比如修改分辨率,码流,帧率,然后再推流给流媒体服务器,他可以无感切换文件,播放端不断流.他还可以支持插件,我们可以提供原始YUV数据输入给插件,你们处理完后再返回给转码服务进行编码推流  
+所以我们提供了此软件来协助对音视频有处理需求的用户.  
 他有两个程序,XEngine_AVCodecApp 和 XEngine_AVToolApp.  
 
 #### 为什么要使用此软件
@@ -50,7 +50,7 @@ XEngine_AVCodecApp是核心程序,他提供了对音视频的编解码,拉流推
 1. 支持HTTP协议通信,支持HTTP API控制(大量API接口帮助你随心所欲的控制推拉流编解码)
 2. 支持HTTP验证
 3. 支持推流(写文件和推流给流媒体服务)和拉流(读文件和直播流)
-4. 支持录像(MP4,TS,M3U8...)
+4. 支持录像(MP4,TS,M3U8,MKV,MOV...)
 5. 支持多种协议推拉流(RTMP.RTSP,RTP,UDP,FLV,文件等等)
 6. 支持对音视频重新编解码,支持配置编解码参数
 7. 支持音视频滤镜处理(帧率修改,音频声音大小规范等)
@@ -81,7 +81,7 @@ XEngine_AVCodecApp是核心程序,他提供了对音视频的编解码,拉流推
 直接运行即可
 
 #### Linux
-需要Ubuntu24.04 lts,或者rockylinux 10,或者macos arm64 系统,首先执行环境安装AVCodec_ENVInstall.sh 脚本.  
+需要Ubuntu24.04 or 26.04 lts,或者rockylinux 10,或者macos arm64 系统,首先执行环境安装AVCodec_ENVInstall.sh 脚本.  
 然后可以运行 ./XEngine_AVCodecApp 服务进行测试
 
 #### Macos
@@ -114,8 +114,15 @@ XEngine_AVCodecApp是核心程序,他提供了对音视频的编解码,拉流推
 ![输入图片说明](picture/structstream.jpg "在这里输入图片标题")
 
 ## 目录结构
-- AVCodec_APPExample   服务端通信转码示例
-- XEngine_Package      环境安装包
+- AVCodec_APPExample       服务端通信转码示例
+- AVCodec_PluginExample    插件开发示例包
+- XEngine_Package          环境安装包
+- Document                 文档
+- picture                  软件截图
+
+## 测试接口示例
+你可以通过postman网站获得我们的测试接口  
+https://go.postman.co/workspace/c6e6f0e8-1a59-49c1-8ffe-5e19523623ce
 
 ## 关注我们
 如果你觉得这个软件对你有帮助,请你给我们一个START吧  

@@ -50,7 +50,7 @@ Software Features:
 1.  Supports HTTP protocol communication, HTTP API control (extensive API interfaces for flexible control over push/pull streams and codecs).
 2.  Supports HTTP authentication.
 3.  Supports push streaming (writing to files, pushing to streaming media servers) and pull streaming (reading files, live streams).
-4.  Supports recording (MP4, TS, M3U8...).
+4.  Supports recording (MP4,TS,M3U8,MKV,MOV...).
 5.  Supports multiple protocols for push/pull streams (RTMP, RTSP, RTP, UDP, FLV, files, etc.).
 6.  Supports audio/video re-encoding, configurable codec parameters.
 7.  Supports audio/video filter processing (frame rate modification, audio normalization, etc.).
@@ -81,7 +81,7 @@ Software Features:
 Run directly.
 
 #### Linux
-Requires Ubuntu 24.04 LTS or rockylinux 10 or macos arm64 system. First, run the environment setup script AVCodec_ENVInstall.sh.
+Requires Ubuntu 24.04 or 26.04 LTS or rockylinux 10 or macos arm64 system. First, run the environment setup script AVCodec_ENVInstall.sh.
 Then you can run `./XEngine_AVCodecApp` for testing.
 
 #### macOS
@@ -116,6 +116,13 @@ can also provide core source code; the specific price can be discussed by contac
 ## Dir struct
 - AVCodec_APPExample   example for avcodec 
 - XEngine_Package      install script
+- XEngine_Package      env install package
+- Document             document
+- picture              Software screenshot
+
+## test restful api
+You can obtain our test API through the Postman website.  
+https://go.postman.co/workspace/c6e6f0e8-1a59-49c1-8ffe-5e19523623ce
 
 ## Follow Us
 If you find this software helpful, please give us a STAR!

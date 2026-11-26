@@ -1,3 +1,32 @@
+XEngine_AVCodecApp V2.5.2.1001
+
+ci:优化扩展增加ubuntu26.04
+增加:支持更多视频采样格式
+更新:依赖库和框架脚本
+优化:优化TSP模块加载方式
+修改:使用udp替换管道文件通信,现在windows也支持ts稳定流
+修改:h265编解码支持和优化参数选择
+修改:编译链接问题
+修正:编解码初始化失败导致崩溃的问题
+修正:没有加载编译验证开关导致的问题
+
+ci:improved and add ubuntu 26.04 support
+added:more video format support
+update:depend library and framework script
+improved:tsp module load
+modify:use udp intseatd
+modify:Use UDP instead of pipe file communication; Windows now also supports stable TS streams.
+modify:H.265 encoding/decoding support and optimized parameter selection.
+modify:Resolve compilation and linking issues.
+fixed:Crash caused by codec initialization failure.
+fixed:Issue caused by the compilation validation switch not being loaded.
+========================================================================
+XEngine_AVCodecApp V2.4.0.1001
+
+added:new foramt convert support
+
+转码工具V2.4.0:增加新的转码格式支持
+========================================================================
 XEngine_AVCodecApp V2.3.1.1001
 
 added:video thumbnail support 
