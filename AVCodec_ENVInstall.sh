@@ -56,9 +56,19 @@ function InstallEnv_XEngine()
 		./XEngine_LINEnv.sh -b -i 6
 		./XEngine_LINEnv.sh -i 3
 	elif [ "$m_EnvRelease" -eq "2" ] ; then 
-		rm -rf ./XEngine_UBuntu_24.04_x86-64
-		unzip ./XEngine_UBuntu_24.04_x86-64.zip -d ./XEngine_UBuntu_24.04_x86-64
-		cd ./XEngine_UBuntu_24.04_x86-64
+		VERSION_ID=$(grep 'VERSION_ID' /etc/os-release | cut -d '"' -f 2 | cut -d '.' -f 1)
+		if [ "$VERSION_ID" == "24" ]; then
+    		rm -rf ./XEngine_UBuntu_24.04_x86-64
+			unzip ./XEngine_UBuntu_24.04_x86-64.zip -d ./XEngine_UBuntu_24.04_x86-64
+			cd ./XEngine_UBuntu_24.04_x86-64
+		elif [ "$VERSION_ID" == "26" ]; then
+    		rm -rf ./XEngine_UBuntu_26.04_x86-64
+			unzip ./XEngine_UBuntu_26.04_x86-64.zip -d ./XEngine_UBuntu_26.04_x86-64
+			cd ./XEngine_UBuntu_26.04_x86-64
+		else
+			echo -e "\033[31mThis script only supports 24.04 and 26.04.\033[0m"
+			exit 1
+		fi
 
 		chmod 777 ./XEngine_LINEnv.sh
 		./XEngine_LINEnv.sh -b -i 6
@@ -89,9 +99,16 @@ function InstallEnv_Execution()
 		dnf install ffmpeg-free-devel opencv-devel SDL2-devel luajit-devel --allowerasing -y
 		dnf install ./tsduck-el10.x86_64.rpm ./tsduck-devel-el10.x86_64.rpm -y
 	elif [ "$m_EnvRelease" -eq "2" ] ; then 
-		apt install libopencv-dev libsdl2-dev libluajit-5.1-dev -y
-    	dpkg -i ./tsduck.ubuntu24_amd64.deb ./tsduck-dev.ubuntu24_amd64.deb
-    	apt -f install -y
+		VERSION_ID=$(grep 'VERSION_ID' /etc/os-release | cut -d '"' -f 2 | cut -d '.' -f 1)
+
+		apt install libavcodec-dev libavdevice-dev libavfilter-dev libavformat-dev libswresample-dev libswscale-dev libffmpeg-nvenc-dev libopencv-dev libsdl2-dev libluajit-5.1-dev -y
+		if [ "$VERSION_ID" == "24" ]; then
+			dpkg -i ./tsduck.ubuntu24_amd64.deb ./tsduck-dev.ubuntu24_amd64.deb
+			apt -f install -y
+		else
+			dpkg -i ./tsduck.ubuntu26_amd64.deb ./tsduck-dev.ubuntu26_amd64.deb
+			apt -f install -y
+		fi
 	elif [ "$m_EnvRelease" -eq "3" ] ; then 
 		brew install opencv@4 sdl2 luajit tsduck ffmpeg@8
 	else
